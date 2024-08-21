@@ -1,8 +1,9 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import Tour
 
 # Create your views here.
 def index(request):
-    return HttpResponse("My Third Django Application")
+    tours = Tour.objects.all()
+    context = {'tours':tours}
+    return render(request, 'fouth/index.html', context)
 
-# Create your views here.

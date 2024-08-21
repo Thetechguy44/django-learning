@@ -10,4 +10,4 @@ class Tour(models.Model):
     phone = models.IntegerField()
 
     def __str__(self):
-        return (f"ID:{self.id}: From {origin_country} in {state} studying {course} at {age} with the phone number {phone}")
+        return (f"ID:{self.id}: From {self.origin_country} in {self.state} studying {self.course} at {self.age} with the phone number {self.phone}")
